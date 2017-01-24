@@ -18,23 +18,29 @@ addButton.addEventListener('click', (event) => {
     // console.log(userInput);
 
     // grabbing global 'userSum' and adding to userInput to create new global userSum
-    userSum = userInput + userSum;
+    // userSum = userInput + userSum;
     // inrementing i each time which is our entries
-    i++;
+    // i++;
     // calculating the average
-    average = userSum / i;
+    // average = userSum / i;
 
     console.log('Variable userInput = ' + userInput);
     console.log('Variable userSum = ' + userSum);
     console.log('Variable i / entries = ' + i);
     console.log('Variable average = ' + average);
 
-    if (i === i) {
-      enteredAmt.innerHTML = `You've entered ${i} number. Enter another or press finished.`
+
+
+    if (Number.isNaN(userInput) === true) {
+      alert("This is an invalid input, please enter your numbers again");
+    } else {
+      userSum = userInput + userSum;
+      i++;
+      average = userSum / i;
     }
 
-    if (isNaN(userInput)) {
-      alert("This is an invalid input, please enter your numbers again");
+    if (i === i) {
+      enteredAmt.innerHTML = `You've entered ${i} number. Enter another or press finished.`
     }
 
     mainForm.reset();
