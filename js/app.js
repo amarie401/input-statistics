@@ -39,8 +39,10 @@ addButton.addEventListener('click', (event) => {
       average = userSum / i;
     }
 
-    if (i === i) {
+    if (i === 1) {
       enteredAmt.innerHTML = `You've entered ${i} number. Enter another or press finished.`
+    } else {
+      enteredAmt.innerHTML = `You've entered ${i} numbers. Enter another or press finished.`
     }
 
     mainForm.reset();
